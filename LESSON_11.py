@@ -15,8 +15,8 @@ resp = requests.get(
 
     }
 )
-result = resp.json()['data'][0]['url']
 try:
+  result = resp.json()['data'][0]['url']
   print(f'STATUS_CODE = {resp.status_code}, your GIF - {result}')
 except IndexError:
   pass
